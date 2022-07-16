@@ -1,19 +1,121 @@
 .container {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: .1fr 1fr 1fr 1fr 1fr .1fr;
+    grid-template-rows: .2fr 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "navbar navbar navbar navbar navbar navbar"
-      ". content content content content ."
-      ". content content content content ."
-      ". content content content content ."
+      ". content content content content content"
+      ". content content content content content"
+      ". content content content content content"
       "footer footer footer footer footer footer";
   }
   
-  .navbar { grid-area: navbar; }
-  
-  .footer { grid-area: footer; }
-  
+  .navbar { 
+    margin-top: 5%;
+    grid-area: navbar;}
+
+  /* content section ------------------- */
   .content { grid-area: content; }
+
+  .left-title {
+    margin-top: 20px;
+    font-size:40px;
+  }
+  .left-title-sub{
+    font-size:25px;
+    color: #555;
+  }
+  .subscribe{
+    width: 100%;
+    font-family: sans-serif;
+    color:darkgrey;
+    margin-top: 10px;
+  }
+
+  .subscribe a{
+    text-decoration: none;
+    color: darkgray;
+  }
+
+  .buttons{
+    display: flex;
+  }
+  .container-trail{
+    display: flex;
+    font-size: 10px;
+    
+  }
+  .blt{
+    margin-top: -16px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 30px;
+    color: #0D6EFD;
+  }
+
+.top{
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+  .top-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+  }
+  .top-right img{
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 60px;
+  }
+  .explore{
+    margin-top: 4%;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .start-explore{
+    text-align: center;
+    font-size: 1.6em;
+  }
+  .explore-text{
+    text-align: center;
+    font-size: 1em;
+    width: 70%;
+  }
+  
+  .explore-img{
+    display: flex;
+    justify-content: space-around;
+  }
+  .explore-img img{
+    width: 15%;
+  }
+  .credit-card img{
+    width: 50%;
+  }
+
+
+  .footer { grid-area: footer; }
+
+
+  
+  
+  /* Large Screens ---------------------------*/
+  @media all and (min-width:992px){
+   .top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+   }
+
+
+
+  }
   
