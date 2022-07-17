@@ -13,6 +13,10 @@
   .navbar { 
     
     grid-area: navbar;}
+  .nav-item a{
+    color: black;
+    font-size: .8em;
+  }
 
   /* content section ------------------- */
   .content { grid-area: content; }
